@@ -1,6 +1,8 @@
 # HotkeyHero_Public
 The public branch of my HotkeyHero, AHK launcher.
 
+To use the programe, run HotkeyHero.ahk. CAPS + SPACE activate the GUI. CAPS is deactivated, but ALT+CAPS applies caps lock.
+
 INTRODUCTION
 ---------------------- 
 The HotkeyHero progam was heavily influenced by another GitHub member - Asger Juul Brunshøj - which I was impressed by and utilised for many years. After some time I deleted my copy of Asger's work and built my own with a similar concept, adding a number of moduals. I keep a 'private' copy of this repository for my own personal commands but plan to update this public version with any new moduals I add.
