@@ -17,7 +17,7 @@ if UserInputBox = b ;keystroke to initiate the button menu from the HotkeyHero G
 	Gui, Tab, ScriptCommands ;	Call a tab by name and then build onto that tab.
 	Gui, Add, Button, x22 y39 w100 h30 gButton1, Reload Script ;	The 'g' variable tells the button which function to call from below.
 	Gui, Add, Button, x142 y39 w100 h30 gButton2, Open Directory ;	Here, 'Open Directory' is the text shown on the button control.
-	Gui, Add, Button, x262 y39 w100 h30 gButton3, Button3
+	Gui, Add, Button, x262 y39 w100 h30 gButton3, Nightlight Toggle
 	Gui, Add, Button, x22 y89 w100 h30 gButton4, Button4
 	Gui, Add, Button, x142 y89 w100 h30 gButton5, Button5
 	Gui, Add, Button, x262 y89 w100 h30 gButton6, Button6
@@ -61,7 +61,18 @@ if UserInputBox = b ;keystroke to initiate the button menu from the HotkeyHero G
 
 	Button3:
 	gui_destroy()
-	msgbox, You pressed a button!
+    ; save current mouse pos
+    MouseGetPos, xpos, ypos
+    ; open the settings window
+    run ms-settings:nightlight
+    ; added slight delay before sending click
+    Sleep, 1500
+    ; you might need to verify location using WindowSpy
+    MouseClick,, 1246, 150,,Relative
+    ; close the settings window
+    Send, {Alt Down}{F4}{Alt Up}
+    ; restore the mouse position
+    MouseMove, %xpos%, %ypos%
 	return
 
 	Button4:
