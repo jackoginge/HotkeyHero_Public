@@ -14,15 +14,15 @@ if UserInputBox = s
 	Gui, +AlwaysOnTop -SysMenu +ToolWindow -caption +Border
 
 	Gui, Tab, Folders
-	Gui, Add, DropDownList, x12 y29 w340 vfolderChoice , Documents|Downloads ;	Each tab must have a unique variable to submit a selection to
+	Gui, Add, DropDownList, x12 y29 w340 vfolderChoice Sort, Documents|Downloads ;	Each tab must have a unique variable to submit a selection to
 	Gui, Add, Button, x362 y29 w40 h20  gButtonOne , -> ;	For clarity each button has a seperate function. This also means that two DDL could share an item name without performing the same function.
 
 	Gui, Tab, Programs
-	Gui, Add, DropDownList, x12 y29 w340 vprogramChoice, 1|2|3
+	Gui, Add, DropDownList, x12 y29 w340 vprogramChoice Sort, 1|2|3
 	Gui, Add, Button, x362 y29 w40 h20  gButtonTwo , ->
 
 	Gui, Tab, Websites
-	Gui, Add, DropDownList, x12 y29 w340 vwebsiteChoice, 1|2|3
+	Gui, Add, DropDownList, x12 y29 w340 vwebsiteChoice Sort, 1|2|3
 	Gui, Add, Button, x362 y29 w40 h20  gButtonThree , ->
 
 	Gui, Show, w416 h63, Shortcutter

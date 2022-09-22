@@ -5,6 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance
 
 SetCapsLockState, AlwaysOff
+#include %A_ScriptDir%\Replacer.ahk ;	Include the hotstring file
 
 ;	Formatting options for GUI
 gui_control_options := "xm w220 " . cForeground . " -E0x200"
@@ -40,7 +41,7 @@ gui_spawn:
 		;Gui, Color, 1d1f21, 282a2e
 		Gui, +AlwaysOnTop -SysMenu +ToolWindow -caption +Border
 		Gui, Font, s11, Segoe UI
-		Gui, Add, Text, %gui_control_options% vgui_main_title, Hello Jack - How can I help?
+		Gui, Add, Text, %gui_control_options% vgui_main_title, Hello - How can I help?
 		Gui, Font, s10, Segoe UI
 		Gui, Add, Edit, %gui_control_options% vUserInputBox gInstantCallback
 		Gui, Show,, myGUI
